@@ -1,0 +1,24 @@
+@media screen and (max-width: 768px) {
+
+    .mainBox {
+       overflow: scroll;
+    }
+    .MainBox1{
+        width:100%;
+        height:215vh;
+        flex-direction: column;
+        border-radius: 25px;
+        background-color: aqua;
+    }
+    .form-main-box{
+        display: flex;
+        flex-direction: column;
+    }
+    .respon{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+    }  
+  }
+
