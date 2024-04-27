@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from "axios";
+import toast, { Toaster } from "react-hot-toast";
 import "./BookingForm.css"
 // PassengerDetails component
 const PassengerDetails = ({ passenger, onChange, onRemove }) => {
@@ -85,10 +86,8 @@ const BookingForm = () => {
     event.preventDefault();
     try {
       const dataToSave = { ...formData, passengers };
-      console.log('Data to save:', dataToSave);
-
       const response = await axios.post("http://localhost:3000/bookings", dataToSave);
-      console.log('Response from backend:', response.data);
+      toast.success("Your details added succesfully",response);
       
       setFormData({
         Date_of_Booking: "",
@@ -264,6 +263,7 @@ const BookingForm = () => {
             </div>
           </form>
         </div>
+        <Toaster position="top-right" reverseOrder={false} />
       </div>
     </>
   );

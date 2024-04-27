@@ -16,7 +16,6 @@ const BookingData = () => {
       );
       setBookingData(response.data);
       toast.success("Your details added succesfully");
-      console.log(bookingData);
     } catch (error) {
       toast.error("Something went wrong");
       setBookingData(null);
