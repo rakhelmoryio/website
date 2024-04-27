@@ -100,14 +100,14 @@ const BookingData = () => {
                     </p>
                   </div>
                 </div>
-                <p className="px-2 text-sm text-center  text-slate-600 "> IR recovers only 57% of cost of travel on an average</p>
+                <p className="px-2 text-sm text-center  text-slate-600 ">
+                  {" "}
+                  IR recovers only 57% of cost of travel on an average
+                </p>
               </div>
-              <div  className="bg-white w-96 h-auto my-2 rounded-lg mx-2 pb-3 ">
+              <div className="bg-white w-96 h-auto my-2 rounded-lg mx-2 pb-3 ">
                 {bookingData.passengers.map((passenger, index) => (
-                  <div
-                    key={index}
-                  
-                  >
+                  <div key={index}>
                     <h1 className="text-center font-medium border-b-2 border-dashed text-slate-500">
                       Passenger Details - <span>{index + 1}</span>
                     </h1>
